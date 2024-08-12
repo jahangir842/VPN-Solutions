@@ -1,3 +1,7 @@
+Recommended:   https://github.com/wg-easy/wg-easy
+
+
+
 Here’s a detailed procedure on how to install **WG-Easy** using Docker Compose. WG-Easy is a user-friendly web interface for managing WireGuard VPN servers, which simplifies the setup and management process.
 
 ### Step 1: Install Docker and Docker Compose
