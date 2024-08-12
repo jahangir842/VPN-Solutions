@@ -49,32 +49,8 @@ Create a `docker-compose.yml` file inside the `wg-easy` directory:
 nano docker-compose.yml
 ```
 
-Add the following content to the file:
-```yaml
-version: '3.8'
+Use the docker-compose.yml file provided in this repository
 
-services:
-  wg-easy:
-    image: weejewel/wg-easy
-    container_name: wg-easy
-    environment:
-      - WG_HOST=your.domain.com  # Replace with your domain or public IP address
-      - PASSWORD=yourpassword    # Replace with a secure password for the admin interface
-    ports:
-      - "51820:51820/udp"        # WireGuard port
-      - "51821:51821/tcp"        # Web interface port
-    volumes:
-      - ./data:/etc/wireguard    # Persistent storage for WireGuard config
-    restart: unless-stopped
-    cap_add:
-      - NET_ADMIN                # Needed for WireGuard to manage network interfaces
-      - SYS_MODULE               # Required for loading kernel modules
-    sysctls:
-      - net.ipv4.conf.all.src_valid_mark=1  # Required for routing
-    command: [
-      "sh", "-c", "modprobe wireguard && wg-easy"
-    ]
-```
 
 - **WG_HOST**: Replace with your public IP address or domain.
 - **PASSWORD**: Set a secure password for accessing the WG-Easy web interface.
