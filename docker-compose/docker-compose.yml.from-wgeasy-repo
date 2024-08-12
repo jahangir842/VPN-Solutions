@@ -6,10 +6,11 @@ services:
     environment:
       # Change Language:
       # (Supports: en, ua, ru, tr, no, pl, fr, de, ca, es, ko, vi, nl, is, pt, chs, cht, it, th, hi)
-      - LANG=de
+      - LANG=en
       # ⚠️ Required:
       # Change this to your host's public address
-      - WG_HOST=raspberrypi.local
+      - WG_HOST=jahangir.blog
+      - PASSWORD=Pakistan@786    # Replace with a secure password for the admin interface
 
       # Optional:
       # - PASSWORD_HASH=$$2y$$10$$hBCoykrB95WSzuV4fafBzOHWKu9sbyVa34GJr8VV5R/pIelfEMYyG (needs double $$, hash of 'foobar123'; see "How_to_generate_an_bcrypt_hash.md" for generate the hash)
