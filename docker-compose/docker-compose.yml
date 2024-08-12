@@ -28,12 +28,12 @@ services:
       # - UI_CHART_TYPE=0 # (0 Charts disabled, 1 # Line chart, 2 # Area chart, 3 # Bar chart)
 
 
-    # New Repository on github: https://github.com/wg-easy/wg-easy            (application is not password enabled)
+    # New Repository on github: https://github.com/wg-easy/wg-easy            (application does not have login feature)
     image: ghcr.io/wg-easy/wg-easy
 
 
-    # Old Repository on dockerhub: https://hub.docker.com/r/weejewel/wg-easy     (application is password enabled)    
-    # weejewel/wg-easy
+    # Old Repository on dockerhub: https://hub.docker.com/r/weejewel/wg-easy     (application has login feature)    
+    # image: weejewel/wg-easy
 
 
     container_name: wg-easy
