@@ -1,5 +1,7 @@
 Installing WireGuard on Ubuntu is straightforward. WireGuard is a simple and efficient VPN that runs inside the Linux kernel, making it both secure and fast.
 
+**Official Installation :** https://www.wireguard.com/quickstart/
+
 Here’s a step-by-step guide to installing WireGuard on Ubuntu:
 
 ### Step 1: Update Your System
