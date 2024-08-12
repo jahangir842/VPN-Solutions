@@ -1,4 +1,7 @@
-Recommended:   https://github.com/wg-easy/wg-easy
+Recommended:   
+
+New Repository: https://github.com/wg-easy/wg-easy            (application is not password enabled)
+Old Repository: https://hub.docker.com/r/weejewel/wg-easy     (application is password enabled)
 
 
 
