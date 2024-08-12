@@ -3,6 +3,13 @@ version: '3.8'
 services:
   wg-easy:
     image: weejewel/wg-easy
+
+# New Repository: https://github.com/wg-easy/wg-easy            (application is not password enabled)
+# ghcr.io/wg-easy/wg-easy
+
+# Old Repository: https://hub.docker.com/r/weejewel/wg-easy     (application is password enabled)    
+# weejewel/wg-easy
+
     container_name: wg-easy
     environment:
       - PASSWORD=Password@786               # Replace with a strong password for the admin interface
