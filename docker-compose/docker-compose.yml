@@ -5,19 +5,15 @@ services:
     image: weejewel/wg-easy
     container_name: wg-easy
     environment:
-      - WG_HOST=your.domain.com  # Replace with your domain or public IP address
-      - PASSWORD=yourpassword    # Replace with a secure password for the admin interface
-    ports:
-      - "51820:51820/udp"        # WireGuard port
-      - "51821:51821/tcp"        # Web interface port
+      - PASSWORD=Password@786               # Replace with a strong password for the admin interface
+      - WG_HOST=54.90.88.71                 # Replace with your domain or public IP
+#      - WG_PORT=51820                       # WireGuard port (optional, default is 51820)
+#      - WG_DEFAULT_ADDRESS=10.8.0.x         # Default IP range for clients (optional)
+#      - WG_DEFAULT_DNS=1.1.1.1              # Default DNS for clients (optional)
     volumes:
-      - ./data:/etc/wireguard    # Persistent storage for WireGuard config
+      - ./config:/etc/wireguard              # Persistent storage for WireGuard config
+    ports:
+      - "51820:51820/udp"
+      - "51821:51821/tcp"
     restart: unless-stopped
-    cap_add:
-      - NET_ADMIN                # Needed for WireGuard to manage network interfaces
-      - SYS_MODULE               # Required for loading kernel modules
-    sysctls:
-      - net.ipv4.conf.all.src_valid_mark=1  # Required for routing
-    command: [
-      "sh", "-c", "modprobe wireguard && wg-easy"
-    ]
+    privileged: true                        # Required to access the host's network stack
